@@ -2,6 +2,7 @@ Feature: Filter Inventory by ID
 
   Background:
     * url baseUrl
+    # Load expected response data from a JSON file (contains the item you want to filter)
     * def expected_Response = read("../testData/filterInventory.json");
 
   Scenario: Filter item by id
@@ -9,7 +10,8 @@ Feature: Filter Inventory by ID
     And param id = expected_Response.id
     When method GET
     Then status 200
-    And karate.log('Response:', response)
+    * karate.log('Response:', response)
+    # Validate that response matches the expected ID,name,image and price
     And match response.id == expected_Response.id
     And match response.name == expected_Response.name
     And match response.price == expected_Response.price
