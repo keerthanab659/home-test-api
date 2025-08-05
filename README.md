@@ -1,10 +1,17 @@
-# 🧪 Home Test API - Karate BDD Framework
+**Take Home API Test - Karate Framework**
 
 The purpose of this project is to automate test scenarios for an inventory-based API hosted on Docker, using the Karate BDD testing framework along with Java and Maven.
 
 ---
 
-## 📁 Project Structure
+***Prerequisites***
+
+- Java 8 or higher
+- Maven 
+- Git
+- IDE - Eclipse/Intellije/VS Code
+
+**Framework-structure**
 
 ```
 home_test_api/
@@ -15,16 +22,17 @@ home_test_api/
 │           └── inventoryapi/
 │               ├── features/
 │               │   ├── addExistentID.feature
-│               │   ├── addInventory.feature
-│               │   ├── addMissingInventory.feature
-│               │   ├── filterInventory.feature
-│               │   ├── getInventory.feature
-│               │   └── validateInventory.feature
+│               │   ├── addMissingInventoryItem.feature
+│               │   ├── addNewInventoryItem.feature
+│               │   ├── filterByInventoryItem.feature
+│               │   ├── getAllInventoryItem.feature
+│               │   └── validateInventoryItem.feature
 │               ├── testData/
-│               │   ├── addInventory.json
-│               │   ├── filterInventory.json
+│               │   ├── addExistentId.json
+|               │   ├── addNewInventoryItem.
+│               │   ├── filterByInventory.json
 │               │   ├── missingInfo.json
-│               └── InventoryTest.java
+│               └── inventoryTestRunnner.java
 ├── karate-config.js
 ├── pom.xml
 └── README.md
@@ -32,16 +40,16 @@ home_test_api/
 
 ---
 
-## ⚙️ Setup Instructions
+**Usage Guidelines**
 
-### 1. Clone the Repository
+**1. Clone the Repository**
 
 ```bash
 git clone https://github.com/your-username/home-test-api.git
 cd home-test-api
 ```
 
-### 2. Start the API Using Docker
+**2. Run the Docker file**
 
 ```bash
 docker pull automaticbytes/demo-app
@@ -53,17 +61,9 @@ docker run -p 3100:3100 automaticbytes/demo-app
 
 ---
 
-### 🧰 Prerequisites
+**Test Execution**
 
-- Java 8 or higher
-- Maven installed (`mvn -v`)
-- Git + GitHub
-- IDE (e.g., IntelliJ IDEA)
-- Internet (for Maven dependencies)
-
-## ▶️ How to Run Tests
-
-### ✅ Run Tests by inventoryTest(Runner File)
+### Run Tests by inventoryTestRunner(Runner File)
 
 ```bash
 mvn clean 
@@ -75,7 +75,7 @@ mvn test "-Dkarate.options=classpath:inventoryapi/features"
 
 Run all 6 inventory tests features:
 
-### ✅ Run Tests by Feature File
+**Run Tests by Feature File**
 
 ```bash
 mvn test "-Dkarate.options=classpath:inventoryapi/features/addExistentId.feature"
@@ -83,51 +83,43 @@ mvn test "-Dkarate.options=classpath:inventoryapi/features/addExistentId.feature
 
 ---
 
-## 📦 Reports
+**Reports**
 
 Sample reports are stored inside the `reports/` directory.
 
 
-## 📑 Test Scenarios Covered
+**Test Cases**
 
 Each `.feature` file in `inventoryapi/features` covers a specific functionality of the Inventory API:
 
-| Feature File                  | Purpose                                          |
-|-------------------------------|--------------------------------------------------|
-| `addExistentID.feature`       | Attempt to add an existing ID                    |
-| `addInventory.feature`        | Add a new item to the inventory                  |
-| `addMissingInventory.feature` | Add a item with missing mandatory fields         |
-| `filterInventory.feature`     | Filter inventory by ID                           |
-| `getInventory.feature`        | Get all available inventory items                |
-| `validateInventory.feature`   | Validate the newly added ID is present           |
+| Feature File Names                | Purpose of the Featur File                      |
+***************************************************************************************
+| `addExistentID.feature`           | Attempt to add an existing ID                   |
+| `addMissingInventoryItem.feature` | Add a item with missing mandatory field         |
+| `addNewInventoryItem.feature`     | Trying to add new item to the inventory         |
+| `filterByInventoryItem.feature`   | Filter the inventory item by ID                 |
+| `getAllInventoryItem.feature`     | Get all available inventory item                |
+| `validateInventoryItem.feature`   | Validate the newl ID is present in Inventory    |
 
 ---
 
-## 🧾 Test Data
+**Test Data**
 
 Test data files are available under `inventoryapi/testData/`:
 
-| File                   | Description                                 |
-|------------------------|---------------------------------------------|
-| `addInventory.json`    | New data with a valid request payload       |
-| `filterInventory.json` | Filter by ID request payload                |
-| `missingInfo.json`     | Mandatory field is missing in the payload   |
+| File                        | Description                                 |
+*****************************************************************************
+| `addExistentId.json`        | Add item for existent id                    |
+| `addNewInventoryItem.json`  | New data with a valid request payload       |
+| `filterByInventory.json`    | Filter by ID request payload                |
+| `missingInfo.json`          | Mandatory field is missing in the payload   |
 
 ---
 
-## ⚙️ Configuration
+**Karate-Configuration**
 
-- `karate-config.js` sets the base URL and dynamic config options.
-- You can extend this file to support multiple environments like `dev`, `qa`, etc.
+-The karate-config.js file is used to define the base URL and other dynamic configuration settings.
 
----
-
-## 🛠️ Tools Used
-
-- [Karate DSL](https://github.com/karatelabs/karate) – API test automation
-- [JUnit 5](https://junit.org/) – Test runner
-- [Apache Maven](https://maven.apache.org/) – Build tool
-- [Docker](https://www.docker.com/) – For running the API locally
-- Git + GitHub – Version control and sharing
+-It can be extended to support multiple environments such as dev, qa, and others.
 
 ---

@@ -26,7 +26,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 });
 </script>
 
-    <title>inventoryapi.features.filterInventory</title>
+    <title>inventoryapi.features.filterByInventoryItem</title>
   </head>
   <body>
     <div id="root-container">
@@ -38,8 +38,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
     </a>
     <div class="nav-count">
-      <div id="nav-pass" class="bg-success">0</div>
-      <div id="nav-fail" class="bg-danger">1</div>
+      <div id="nav-pass" class="bg-success">1</div>
+      <div id="nav-fail" class="bg-danger">0</div>
     </div>
   </div>
   <div id="nav-env">
@@ -49,12 +49,12 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div>Scenarios</div>
   </div>
   <div id="nav-date">
-    <div>2025-08-05 06:22:13 PM</div>
+    <div>2025-08-05 08:31:39 PM</div>
   </div>
 </div>
 
         <div class="nav-container">
-          <div class="nav-item failed">
+          <div class="nav-item passed">
             <a href="#[1:8]"><span>[1:8]</span> <span>Filter item by id</span></a>
           </div>
         </div>
@@ -64,7 +64,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
           <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
           <span class="feature-label">Feature:</span>
-          <span class="feature-path">inventoryapi/features/filterInventory.feature</span><span class="feature-label">|</span>
+          <span class="feature-path">inventoryapi/features/filterByInventoryItem.feature</span><span class="feature-label">|</span>
           <span class="feature-name">Filter Inventory by ID</span>
           <span class="feature-description"></span>
         </div>
@@ -80,8 +80,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
                 <span></span>
               </div>
             </div>
-            <div class="scenario-time failed">
-              <span>ms:</span>&nbsp;<span>6</span>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>169</span>
             </div>
           </div>
           <div class="step-row">
@@ -135,11 +135,11 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div class="step-container" id="0.6">
       <div class="step-ref bg-step">6</div>
       
-      <div class="step-cell failed">
-        <span>*</span>&nbsp;<span>def expected_Response = read(&#39;classpath:testData/filterInventory.json&#39;);</span>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def expected_Response = read(&#39;classpath:testData/filterByInventory.json&#39;);</span>
       </div>
     </div>
-    <div class="time-cell failed">6</div>
+    <div class="time-cell passed">5</div>
   </div>
 
    
@@ -148,23 +148,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.6">18:22:13.133 classpath:inventoryapi/features/filterInventory.feature:6
-* def expected_Response = read(&#39;classpath:testData/filterInventory.json&#39;);
-js failed:
-&gt;&gt;&gt;&gt;
-01: read(&#39;classpath:testData/filterInventory.json&#39;);
-&lt;&lt;&lt;&lt;
-org.graalvm.polyglot.PolyglotException: not found: testData/filterInventory.json
-- com.intuit.karate.resource.ResourceUtils.getResource(ResourceUtils.java:126)
-- com.intuit.karate.core.ScenarioFileReader.toResource(ScenarioFileReader.java:129)
-- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:99)
-- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:95)
-- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:54)
-- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:124)
-- &lt;js&gt;.:program(Unnamed:1)
-
-classpath:inventoryapi/features/filterInventory.feature:6
-</div>   
+     
 
   
 
@@ -177,13 +161,13 @@ classpath:inventoryapi/features/filterInventory.feature:6
 
   <div class="step-row">
     <div class="step-container" id="0.9">
-      <div class="step-ref skipped">9</div>
+      <div class="step-ref passed">9</div>
       
-      <div class="step-cell skipped">
+      <div class="step-cell passed">
         <span>Given</span>&nbsp;<span>path &#39;/inventory/filter&#39;</span>
       </div>
     </div>
-    <div class="time-cell skipped">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -205,13 +189,13 @@ classpath:inventoryapi/features/filterInventory.feature:6
 
   <div class="step-row">
     <div class="step-container" id="0.10">
-      <div class="step-ref skipped">10</div>
+      <div class="step-ref passed">10</div>
       
-      <div class="step-cell skipped">
+      <div class="step-cell passed">
         <span>And</span>&nbsp;<span>param id = expected_Response.id</span>
       </div>
     </div>
-    <div class="time-cell skipped">0</div>
+    <div class="time-cell passed">2</div>
   </div>
 
    
@@ -233,13 +217,13 @@ classpath:inventoryapi/features/filterInventory.feature:6
 
   <div class="step-row">
     <div class="step-container" id="0.11">
-      <div class="step-ref skipped">11</div>
+      <div class="step-ref passed">11</div>
       
-      <div class="step-cell skipped">
+      <div class="step-cell passed">
         <span>When</span>&nbsp;<span>method GET</span>
       </div>
     </div>
-    <div class="time-cell skipped">0</div>
+    <div class="time-cell passed">155</div>
   </div>
 
    
@@ -248,7 +232,26 @@ classpath:inventoryapi/features/filterInventory.feature:6
 
   
 
-     
+  <div class="preformatted" data-parent="0.11">20:31:39.833 request:
+1 &gt; GET http://localhost:3100/api/inventory/filter?id=3
+1 &gt; Host: localhost:3100
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+20:31:39.984 response time in milliseconds: 150
+1 &lt; 200
+1 &lt; X-Powered-By: Express
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Content-Length: 68
+1 &lt; ETag: W/&quot;44-vJ0RBTNCd/juNFNVN25r22XAjZQ&quot;
+1 &lt; Date: Tue, 05 Aug 2025 15:01:39 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+{&quot;id&quot;:&quot;3&quot;,&quot;name&quot;:&quot;Baked Rolls x 8&quot;,&quot;image&quot;:&quot;roll.png&quot;,&quot;price&quot;:&quot;$10&quot;}
+
+</div>   
 
   
 
@@ -261,13 +264,13 @@ classpath:inventoryapi/features/filterInventory.feature:6
 
   <div class="step-row">
     <div class="step-container" id="0.12">
-      <div class="step-ref skipped">12</div>
+      <div class="step-ref passed">12</div>
       
-      <div class="step-cell skipped">
+      <div class="step-cell passed">
         <span>Then</span>&nbsp;<span>status 200</span>
       </div>
     </div>
-    <div class="time-cell skipped">0</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -289,13 +292,13 @@ classpath:inventoryapi/features/filterInventory.feature:6
 
   <div class="step-row">
     <div class="step-container" id="0.13">
-      <div class="step-ref skipped">13</div>
+      <div class="step-ref passed">13</div>
       
-      <div class="step-cell skipped">
+      <div class="step-cell passed">
         <span>*</span>&nbsp;<span>karate.log(&#39;Response:&#39;, response)</span>
       </div>
     </div>
-    <div class="time-cell skipped">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -304,7 +307,14 @@ classpath:inventoryapi/features/filterInventory.feature:6
 
   
 
-     
+  <div class="preformatted" data-parent="0.13">20:31:39.985 Response: {
+  &quot;id&quot;: &quot;3&quot;,
+  &quot;name&quot;: &quot;Baked Rolls x 8&quot;,
+  &quot;image&quot;: &quot;roll.png&quot;,
+  &quot;price&quot;: &quot;$10&quot;
+}
+ 
+</div>   
 
   
 
@@ -324,13 +334,13 @@ classpath:inventoryapi/features/filterInventory.feature:6
 
   <div class="step-row">
     <div class="step-container" id="0.15">
-      <div class="step-ref skipped">15</div>
+      <div class="step-ref passed">15</div>
       
-      <div class="step-cell skipped">
+      <div class="step-cell passed">
         <span>And</span>&nbsp;<span>match response.id == expected_Response.id</span>
       </div>
     </div>
-    <div class="time-cell skipped">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -352,13 +362,13 @@ classpath:inventoryapi/features/filterInventory.feature:6
 
   <div class="step-row">
     <div class="step-container" id="0.16">
-      <div class="step-ref skipped">16</div>
+      <div class="step-ref passed">16</div>
       
-      <div class="step-cell skipped">
+      <div class="step-cell passed">
         <span>And</span>&nbsp;<span>match response.name == expected_Response.name</span>
       </div>
     </div>
-    <div class="time-cell skipped">0</div>
+    <div class="time-cell passed">2</div>
   </div>
 
    
@@ -380,13 +390,13 @@ classpath:inventoryapi/features/filterInventory.feature:6
 
   <div class="step-row">
     <div class="step-container" id="0.17">
-      <div class="step-ref skipped">17</div>
+      <div class="step-ref passed">17</div>
       
-      <div class="step-cell skipped">
+      <div class="step-cell passed">
         <span>And</span>&nbsp;<span>match response.price == expected_Response.price</span>
       </div>
     </div>
-    <div class="time-cell skipped">0</div>
+    <div class="time-cell passed">2</div>
   </div>
 
    
@@ -408,13 +418,13 @@ classpath:inventoryapi/features/filterInventory.feature:6
 
   <div class="step-row">
     <div class="step-container" id="0.18">
-      <div class="step-ref skipped">18</div>
+      <div class="step-ref passed">18</div>
       
-      <div class="step-cell skipped">
+      <div class="step-cell passed">
         <span>And</span>&nbsp;<span>match response.image == expected_Response.image</span>
       </div>
     </div>
-    <div class="time-cell skipped">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
