@@ -90,14 +90,14 @@ Sample reports are stored inside the `reports/` directory.
 
 **✅ Test Cases**
 
-| **Feature File Name**             | **Purpose of the Feature File**                |
-|------------------------------------------------------------------------------------|
-| `addExistentID.feature`           | Attempt to add an existing ID                  |
-| `addMissingInventoryItem.feature` | Add an item with missing mandatory field       |
-| `addNewInventoryItem.feature`     | Add a new item to the inventory                |
-| `filterByInventoryItem.feature`   | Filter the inventory item by ID                |
-| `getAllInventoryItem.feature`     | Get all available inventory items              |
-| `validateInventoryItem.feature`   | Validate the new added inventory               |
+| **Feature File Name**             | **Purpose of the Feature File**          |
+| --------------------------------- | ---------------------------------------- |
+| `addExistentID.feature`           | Attempt to add an existing ID            |
+| `addMissingInventoryItem.feature` | Add an item with missing mandatory field |
+| `addNewInventoryItem.feature`     | Add a new item to the inventory          |
+| `filterByInventoryItem.feature`   | Filter the inventory item by ID          |
+| `getAllInventoryItem.feature`     | Get all available inventory items        |
+| `validateInventoryItem.feature`   | Validate the newly added inventory       |
 
 ---
 
