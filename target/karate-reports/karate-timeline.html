@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"inventoryapi\/features\/addExistentId[1:7]","start":1754372639802,"end":1754372640297,"title":"inventoryapi\/features\/addExistentId[1:7] 11:13:59.802-11:14:00.297 Add Inventory item for existent id"},{"id":2,"group":1,"content":"inventoryapi\/features\/addInventory[1:10]","start":1754372640844,"end":1754372640949,"title":"inventoryapi\/features\/addInventory[1:10] 11:14:00.844-11:14:00.949 Add item for non existent id"},{"id":3,"group":1,"content":"inventoryapi\/features\/addMissingInventory[1.1:19]","start":1754372641086,"end":1754372641168,"title":"inventoryapi\/features\/addMissingInventory[1.1:19] 11:14:01.086-11:14:01.168 Try to add item with missing Missing Id"},{"id":4,"group":1,"content":"inventoryapi\/features\/addMissingInventory[1.2:20]","start":1754372641181,"end":1754372641253,"title":"inventoryapi\/features\/addMissingInventory[1.2:20] 11:14:01.181-11:14:01.253 Try to add item with missing Missing Name"},{"id":5,"group":1,"content":"inventoryapi\/features\/addMissingInventory[1.3:21]","start":1754372641262,"end":1754372641334,"title":"inventoryapi\/features\/addMissingInventory[1.3:21] 11:14:01.262-11:14:01.334 Try to add item with missing Missing Price"},{"id":6,"group":1,"content":"inventoryapi\/features\/addMissingInventory[1.4:22]","start":1754372641343,"end":1754372641415,"title":"inventoryapi\/features\/addMissingInventory[1.4:22] 11:14:01.343-11:14:01.415 Try to add item with missing Missing Image"},{"id":7,"group":1,"content":"inventoryapi\/features\/filterInventory[1:7]","start":1754372641641,"end":1754372641709,"title":"inventoryapi\/features\/filterInventory[1:7] 11:14:01.641-11:14:01.709 Filter item by id"},{"id":8,"group":1,"content":"inventoryapi\/features\/getInventory[1:6]","start":1754372641829,"end":1754372642039,"title":"inventoryapi\/features\/getInventory[1:6] 11:14:01.829-11:14:02.039 Retrive all menu items"},{"id":9,"group":1,"content":"inventoryapi\/features\/validateInventory[1:7]","start":1754372642221,"end":1754372642417,"title":"inventoryapi\/features\/validateInventory[1:7] 11:14:02.221-11:14:02.417 Validate recent added item is present in the inventory"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
