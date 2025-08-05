@@ -88,7 +88,7 @@ mvn test "-Dkarate.options=classpath:inventoryapi/features/addExistentId.feature
 Sample reports are stored inside the `reports/` directory.
 
 
-**✅ Test Cases**
+**✅ Feature Files Overview**
 
 | **Feature File Name**             | **Purpose of the Feature File**          |
 | --------------------------------- | ---------------------------------------- |
