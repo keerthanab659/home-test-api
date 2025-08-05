@@ -2,6 +2,7 @@ Feature: Add item for existent id
 
   Background:
     * url baseUrl
+    # Load the test data with an existing inventory ID
     * def ExistenceId = read("../testData/addInventory.json");
 
   Scenario: Add Inventory item for existent id 
@@ -9,4 +10,4 @@ Feature: Add item for existent id
     When request ExistenceId
     And method POST
     Then status 400
-    And karate.log('Response:', response)
+    * karate.log('Response:', response)

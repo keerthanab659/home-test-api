@@ -2,7 +2,7 @@ package inventoryapi;
 
 import com.intuit.karate.junit5.Karate;
 
-public class inventoryTest {
+public class inventoryTestRunner {
 
     @Karate.Test
     Karate testInventory() {

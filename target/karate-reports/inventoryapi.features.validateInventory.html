@@ -49,13 +49,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div>Scenarios</div>
   </div>
   <div id="nav-date">
-    <div>2025-08-05 11:14:02 AM</div>
+    <div>2025-08-05 02:20:54 PM</div>
   </div>
 </div>
 
         <div class="nav-container">
           <div class="nav-item passed">
-            <a href="#[1:7]"><span>[1:7]</span> <span>Validate recent added item is present in the inventory</span></a>
+            <a href="#[1:8]"><span>[1:8]</span> <span>Validate recent added item is present in the inventory</span></a>
           </div>
         </div>
       </div>
@@ -69,29 +69,29 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           <span class="feature-description"></span>
         </div>
         <div class="scenario">
-          <div class="scenario-heading" id="[1:7]">
+          <div class="scenario-heading" id="[1:8]">
             <div class="heading-container">
               <div class="scenario-tags">
                 
               </div>
               <div class="scenario-keyword">
-                Scenario: <span>[1:7]</span>
+                Scenario: <span>[1:8]</span>
                 <span class="scenario-name">Validate recent added item is present in the inventory</span>
                 <span></span>
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>198</span>
+              <span>ms:</span>&nbsp;<span>41</span>
             </div>
           </div>
           <div class="step-row">
-            <div class="step-container" id="[1:7]bg">
+            <div class="step-container" id="[1:8]bg">
               <div class="step-ref bg-step">&gt;&gt;</div>
               <div class="step-cell passed">Background:</div>
             </div>
             <div class="time-cell passed"></div>
           </div>
-          <div data-parent="[1:7]bg"><div>
+          <div data-parent="[1:8]bg"><div>
   
 
   
@@ -119,48 +119,27 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[1:7]bg"><div>
-  
-
+          <div data-parent="[1:8]bg"><div>
   
 
   <div class="step-row">
-    <div class="step-container" id="0.5">
-      <div class="step-ref bg-step">5</div>
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Read the product data (with ID, name, price, image) from a JSON file</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def productData = read(&quot;../testData/addInventory.json&quot;);</span>
       </div>
     </div>
-    <div class="time-cell passed">2</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.8">
-      <div class="step-ref passed">8</div>
-      
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;/inventory/filter&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">3</div>
   </div>
 
    
@@ -183,6 +162,34 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   <div class="step-row">
     <div class="step-container" id="0.9">
       <div class="step-ref passed">9</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/inventory/filter&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.10">
+      <div class="step-ref passed">10</div>
       
       <div class="step-cell passed">
         <span>And</span>&nbsp;<span>param id = productData.id</span>
@@ -209,14 +216,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.10">
-      <div class="step-ref passed">10</div>
+    <div class="step-container" id="0.11">
+      <div class="step-ref passed">11</div>
       
       <div class="step-cell passed">
         <span>When</span>&nbsp;<span>method GET</span>
       </div>
     </div>
-    <div class="time-cell passed">184</div>
+    <div class="time-cell passed">31</div>
   </div>
 
    
@@ -225,24 +232,24 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.10">11:14:02.227 request:
-1 &gt; GET http://localhost:3100/api/inventory/filter?id=387
+  <div class="preformatted" data-parent="0.11">14:20:54.122 request:
+1 &gt; GET http://localhost:3100/api/inventory/filter?id=914
 1 &gt; Host: localhost:3100
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-11:14:02.409 response time in milliseconds: 181
+14:20:54.150 response time in milliseconds: 27
 1 &lt; 200
 1 &lt; X-Powered-By: Express
 1 &lt; Content-Type: application/json; charset=utf-8
 1 &lt; Content-Length: 67
-1 &lt; ETag: W/&quot;43-xisRY+QHd3KlCVMisl8D0CqfBMM&quot;
-1 &lt; Date: Tue, 05 Aug 2025 05:44:02 GMT
+1 &lt; ETag: W/&quot;43-GQeFnj+dt/NRlMogBqHKTeqZFy4&quot;
+1 &lt; Date: Tue, 05 Aug 2025 08:50:54 GMT
 1 &lt; Connection: keep-alive
 1 &lt; Keep-Alive: timeout=5
-{&quot;id&quot;:&quot;387&quot;,&quot;name&quot;:&quot;Hawaiian&quot;,&quot;image&quot;:&quot;hawaiian.png&quot;,&quot;price&quot;:&quot;$14&quot;}
+{&quot;id&quot;:&quot;914&quot;,&quot;name&quot;:&quot;Hawaiian&quot;,&quot;image&quot;:&quot;hawaiian.png&quot;,&quot;price&quot;:&quot;$14&quot;}
 
 </div>   
 
@@ -256,8 +263,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.11">
-      <div class="step-ref passed">11</div>
+    <div class="step-container" id="0.12">
+      <div class="step-ref passed">12</div>
       
       <div class="step-cell passed">
         <span>Then</span>&nbsp;<span>status 200</span>
@@ -284,14 +291,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.12">
-      <div class="step-ref passed">12</div>
+    <div class="step-container" id="0.13">
+      <div class="step-ref passed">13</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>karate.log(&#39;Expected Response:&#39;, productData)</span>
+        <span>*</span>&nbsp;<span>karate.log(&#39;Expected Response:&#39;, productData)</span>
       </div>
     </div>
-    <div class="time-cell passed">3</div>
+    <div class="time-cell passed">2</div>
   </div>
 
    
@@ -300,8 +307,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.12">11:14:02.413 Expected Response: {
-  &quot;id&quot;: &quot;387&quot;,
+  <div class="preformatted" data-parent="0.13">14:20:54.153 Expected Response: {
+  &quot;id&quot;: &quot;914&quot;,
   &quot;name&quot;: &quot;Hawaiian&quot;,
   &quot;image&quot;: &quot;hawaiian.png&quot;,
   &quot;price&quot;: &quot;$14&quot;
@@ -316,73 +323,24 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           <div><div>
   
 
-  
-
   <div class="step-row">
-    <div class="step-container" id="0.13">
-      <div class="step-ref passed">13</div>
+    <div class="step-container">
+      <div class="step-ref passed"></div>
       
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>match response.id == productData.id</span>
-      </div>
+      <div class="step-cell comment"># Validate that response matches the expected ID,name,image and price</div>
     </div>
-    <div class="time-cell passed">2</div>
+    <div class="time-cell comment"></div>            
   </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.14">
-      <div class="step-ref passed">14</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>match response.name == productData.name</span>
-      </div>
-    </div>
-    <div class="time-cell passed">2</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
 
   <div class="step-row">
     <div class="step-container" id="0.15">
       <div class="step-ref passed">15</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>match response.price == productData.price</span>
+        <span>And</span>&nbsp;<span>match response.id == productData.id</span>
       </div>
     </div>
-    <div class="time-cell passed">2</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -407,10 +365,66 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">16</div>
       
       <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.name == productData.name</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.17">
+      <div class="step-ref passed">17</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.price == productData.price</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.18">
+      <div class="step-ref passed">18</div>
+      
+      <div class="step-cell passed">
         <span>And</span>&nbsp;<span>match response.image == productData.image</span>
       </div>
     </div>
-    <div class="time-cell passed">2</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    

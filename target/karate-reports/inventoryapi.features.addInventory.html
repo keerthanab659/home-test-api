@@ -49,13 +49,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div>Scenarios</div>
   </div>
   <div id="nav-date">
-    <div>2025-08-05 11:14:00 AM</div>
+    <div>2025-08-05 02:20:53 PM</div>
   </div>
 </div>
 
         <div class="nav-container">
           <div class="nav-item passed">
-            <a href="#[1:10]"><span>[1:10]</span> <span>Add item for non existent id</span></a>
+            <a href="#[1:12]"><span>[1:12]</span> <span>Add item for non existent id</span></a>
           </div>
         </div>
       </div>
@@ -69,29 +69,29 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           <span class="feature-description"></span>
         </div>
         <div class="scenario">
-          <div class="scenario-heading" id="[1:10]">
+          <div class="scenario-heading" id="[1:12]">
             <div class="heading-container">
               <div class="scenario-tags">
                 
               </div>
               <div class="scenario-keyword">
-                Scenario: <span>[1:10]</span>
+                Scenario: <span>[1:12]</span>
                 <span class="scenario-name">Add item for non existent id</span>
                 <span></span>
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>102</span>
+              <span>ms:</span>&nbsp;<span>158</span>
             </div>
           </div>
           <div class="step-row">
-            <div class="step-container" id="[1:10]bg">
+            <div class="step-container" id="[1:12]bg">
               <div class="step-ref bg-step">&gt;&gt;</div>
               <div class="step-cell passed">Background:</div>
             </div>
             <div class="time-cell passed"></div>
           </div>
-          <div data-parent="[1:10]bg"><div>
+          <div data-parent="[1:12]bg"><div>
   
 
   
@@ -119,14 +119,21 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[1:10]bg"><div>
-  
-
+          <div data-parent="[1:12]bg"><div>
   
 
   <div class="step-row">
-    <div class="step-container" id="0.5">
-      <div class="step-ref bg-step">5</div>
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Read the base product data from a JSON file</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def productData = read(&quot;../testData/addInventory.json&quot;);</span>
@@ -147,20 +154,20 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[1:10]bg"><div>
+          <div data-parent="[1:12]bg"><div>
   
 
   
 
   <div class="step-row">
-    <div class="step-container" id="0.6">
-      <div class="step-ref bg-step">6</div>
+    <div class="step-container" id="0.7">
+      <div class="step-ref bg-step">7</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def productId = Math.floor(Math.random() * 1000).toString();</span>
       </div>
     </div>
-    <div class="time-cell passed">13</div>
+    <div class="time-cell passed">19</div>
   </div>
 
    
@@ -175,14 +182,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[1:10]bg"><div>
+          <div data-parent="[1:12]bg"><div>
   
 
   
 
   <div class="step-row">
-    <div class="step-container" id="0.7">
-      <div class="step-ref bg-step">7</div>
+    <div class="step-container" id="0.8">
+      <div class="step-ref bg-step">8</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>karate.log(&#39;Generated Unique ID:&#39;, productId)</span>
@@ -197,27 +204,34 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.7">11:14:00.863 Generated Unique ID: 387 
+  <div class="preformatted" data-parent="0.8">14:20:52.937 Generated Unique ID: 914 
 </div>   
 
   
 
 </div>
 </div>
-          <div data-parent="[1:10]bg"><div>
-  
-
+          <div data-parent="[1:12]bg"><div>
   
 
   <div class="step-row">
-    <div class="step-container" id="0.8">
-      <div class="step-ref bg-step">8</div>
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Set the generated ID into the productData payload</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.10">
+      <div class="step-ref bg-step">10</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>set productData.id = productId</span>
       </div>
     </div>
-    <div class="time-cell passed">4</div>
+    <div class="time-cell passed">3</div>
   </div>
 
    
@@ -238,8 +252,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.11">
-      <div class="step-ref passed">11</div>
+    <div class="step-container" id="0.13">
+      <div class="step-ref passed">13</div>
       
       <div class="step-cell passed">
         <span>Given</span>&nbsp;<span>path &#39;/inventory/add&#39;</span>
@@ -266,88 +280,11 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.12">
-      <div class="step-ref passed">12</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>request productData</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.13">
-      <div class="step-ref passed">13</div>
-      
-      <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method POST</span>
-      </div>
-    </div>
-    <div class="time-cell passed">49</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.13">11:14:00.867 request:
-1 &gt; POST http://localhost:3100/api/inventory/add
-1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; Content-Length: 67
-1 &gt; Host: localhost:3100
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
-1 &gt; Accept-Encoding: gzip,deflate
-{&quot;id&quot;:&quot;387&quot;,&quot;name&quot;:&quot;Hawaiian&quot;,&quot;image&quot;:&quot;hawaiian.png&quot;,&quot;price&quot;:&quot;$14&quot;}
-
-11:14:00.916 response time in milliseconds: 49
-1 &lt; 200
-1 &lt; X-Powered-By: Express
-1 &lt; Content-Type: text/plain; charset=utf-8
-1 &lt; Content-Length: 2
-1 &lt; ETag: W/&quot;2-nOO9QiTIwXgNtWtBJezz8kv3SLc&quot;
-1 &lt; Date: Tue, 05 Aug 2025 05:44:00 GMT
-1 &lt; Connection: keep-alive
-1 &lt; Keep-Alive: timeout=5
-OK
-
-</div>   
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
     <div class="step-container" id="0.14">
       <div class="step-ref passed">14</div>
       
       <div class="step-cell passed">
-        <span>Then</span>&nbsp;<span>status 200</span>
+        <span>And</span>&nbsp;<span>request productData</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -375,10 +312,10 @@ OK
       <div class="step-ref passed">15</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>karate.write(productData, &#39;test-classes/inventoryapi/testData/addInventory.json&#39;)</span>
+        <span>When</span>&nbsp;<span>method POST</span>
       </div>
     </div>
-    <div class="time-cell passed">29</div>
+    <div class="time-cell passed">90</div>
   </div>
 
    
@@ -387,7 +324,27 @@ OK
 
   
 
-  <div class="preformatted" data-parent="0.15">11:14:00.946 write to file: target\test-classes\inventoryapi\testData\addInventory.json
+  <div class="preformatted" data-parent="0.15">14:20:52.940 request:
+1 &gt; POST http://localhost:3100/api/inventory/add
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 67
+1 &gt; Host: localhost:3100
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;id&quot;:&quot;914&quot;,&quot;name&quot;:&quot;Hawaiian&quot;,&quot;image&quot;:&quot;hawaiian.png&quot;,&quot;price&quot;:&quot;$14&quot;}
+
+14:20:53.031 response time in milliseconds: 90
+1 &lt; 200
+1 &lt; X-Powered-By: Express
+1 &lt; Content-Type: text/plain; charset=utf-8
+1 &lt; Content-Length: 2
+1 &lt; ETag: W/&quot;2-nOO9QiTIwXgNtWtBJezz8kv3SLc&quot;
+1 &lt; Date: Tue, 05 Aug 2025 08:50:52 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+OK
+
 </div>   
 
   
@@ -404,6 +361,70 @@ OK
       <div class="step-ref passed">16</div>
       
       <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Write the updated productData (with the generated ID) back to the same JSON file</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.18">
+      <div class="step-ref passed">18</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>karate.write(productData, &#39;test-classes/inventoryapi/testData/addInventory.json&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">37</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.18">14:20:53.069 write to file: target\test-classes\inventoryapi\testData\addInventory.json
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.19">
+      <div class="step-ref passed">19</div>
+      
+      <div class="step-cell passed">
         <span>*</span>&nbsp;<span>karate.log(&#39;Product Data:&#39;, productData)</span>
       </div>
     </div>
@@ -416,8 +437,8 @@ OK
 
   
 
-  <div class="preformatted" data-parent="0.16">11:14:00.949 Product Data: {
-  &quot;id&quot;: &quot;387&quot;,
+  <div class="preformatted" data-parent="0.19">14:20:53.069 Product Data: {
+  &quot;id&quot;: &quot;914&quot;,
   &quot;name&quot;: &quot;Hawaiian&quot;,
   &quot;image&quot;: &quot;hawaiian.png&quot;,
   &quot;price&quot;: &quot;$14&quot;
