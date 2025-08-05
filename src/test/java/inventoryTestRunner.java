@@ -1,4 +1,4 @@
-package inventoryapi;
+//package inventoryapi;
 
 import com.intuit.karate.junit5.Karate;
 

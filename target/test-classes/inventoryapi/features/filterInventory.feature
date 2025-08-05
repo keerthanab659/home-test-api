@@ -3,7 +3,7 @@ Feature: Filter Inventory by ID
   Background:
     * url baseUrl
     # Load expected response data from a JSON file (contains the item you want to filter)
-    * def expected_Response = read("../testData/filterInventory.json");
+    * def expected_Response = read('classpath:testData/filterInventory.json');
 
   Scenario: Filter item by id
     Given path '/inventory/filter'

@@ -3,7 +3,7 @@ Feature: Add item with missing information - Missing ID, name, price and image f
   Background:
     * url baseUrl
     # Load all test cases from a JSON file, which contains payloads with missing fields
-    * def testData = read('../testdata/missingInfo.json')
+    * def testData = read('classpath:testdata/missingInfo.json')
     * def Expected_Response = "Not all requirements are met"
 
   Scenario Outline: Try to add item with missing <testCase>

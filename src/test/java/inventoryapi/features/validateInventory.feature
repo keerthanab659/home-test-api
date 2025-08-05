@@ -3,7 +3,7 @@ Feature: Verify Recently Added Item in Inventory
   Background:
     * url baseUrl
     # Read the product data (with ID, name, price, image) from a JSON file
-    * def productData = read("../testData/addInventory.json");
+    * def productData = read('classpath:testData/addInventory.json');
 
   Scenario: Validate recent added item is present in the inventory
     Given path '/inventory/filter'
