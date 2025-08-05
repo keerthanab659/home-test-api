@@ -1,17 +1,17 @@
-**Take Home API Test - Karate Framework**
+**🧪 Take Home API Test - Karate Framework**
 
 The purpose of this project is to automate test scenarios for an inventory-based API hosted on Docker, using the Karate BDD testing framework along with Java and Maven.
 
 ---
 
-***Prerequisites***
+**✅ Prerequisites**
 
 - Java 8 or higher
 - Maven 
 - Git
 - IDE - Eclipse/Intellije/VS Code
 
-**Framework-structure**
+**🗂️ Framework-structure**
 
 ```
 home_test_api/
@@ -40,16 +40,16 @@ home_test_api/
 
 ---
 
-**Usage Guidelines**
+**📘 Usage Guidelines**
 
-**1. Clone the Repository**
+**Clone the Repository**
 
 ```bash
 git clone https://github.com/your-username/home-test-api.git
 cd home-test-api
 ```
 
-**2. Run the Docker file**
+**Run the Docker file**
 
 ```bash
 docker pull automaticbytes/demo-app
@@ -61,7 +61,7 @@ docker run -p 3100:3100 automaticbytes/demo-app
 
 ---
 
-**Test Execution**
+**🚀 Test Execution**
 
 ### Run Tests by inventoryTestRunner(Runner File)
 
@@ -83,40 +83,37 @@ mvn test "-Dkarate.options=classpath:inventoryapi/features/addExistentId.feature
 
 ---
 
-**Reports**
+**📂 Reports**
 
 Sample reports are stored inside the `reports/` directory.
 
 
-**Test Cases**
+**✅ Test Cases**
 
-Each `.feature` file in `inventoryapi/features` covers a specific functionality of the Inventory API:
-
-| Feature File Names                | Purpose of the Featur File                      |
-***************************************************************************************
-| `addExistentID.feature`           | Attempt to add an existing ID                   |
-| `addMissingInventoryItem.feature` | Add a item with missing mandatory field         |
-| `addNewInventoryItem.feature`     | Trying to add new item to the inventory         |
-| `filterByInventoryItem.feature`   | Filter the inventory item by ID                 |
-| `getAllInventoryItem.feature`     | Get all available inventory item                |
-| `validateInventoryItem.feature`   | Validate the newl ID is present in Inventory    |
+| **Feature File Name**             | **Purpose of the Feature File**                |
+|------------------------------------------------------------------------------------|
+| `addExistentID.feature`           | Attempt to add an existing ID                  |
+| `addMissingInventoryItem.feature` | Add an item with missing mandatory field       |
+| `addNewInventoryItem.feature`     | Add a new item to the inventory                |
+| `filterByInventoryItem.feature`   | Filter the inventory item by ID                |
+| `getAllInventoryItem.feature`     | Get all available inventory items              |
+| `validateInventoryItem.feature`   | Validate the new added inventory               |
 
 ---
 
-**Test Data**
+**🧾 Test Data**
 
-Test data files are available under `inventoryapi/testData/`:
+| **File Name**              | **Description**                       |
+| -------------------------- | ------------------------------------- |
+| `addExistentId.json`       | Add item with an already existing ID  |
+| `addNewInventoryItem.json` | New data with a valid request payload |
+| `filterByInventory.json`   | Request payload to filter item by ID  |
+| `missingInfo.json`         | Payload missing mandatory fields      |
 
-| File                        | Description                                 |
-*****************************************************************************
-| `addExistentId.json`        | Add item for existent id                    |
-| `addNewInventoryItem.json`  | New data with a valid request payload       |
-| `filterByInventory.json`    | Filter by ID request payload                |
-| `missingInfo.json`          | Mandatory field is missing in the payload   |
 
 ---
 
-**Karate-Configuration**
+**⚙️ Karate-Configuration**
 
 -The karate-config.js file is used to define the base URL and other dynamic configuration settings.
 
