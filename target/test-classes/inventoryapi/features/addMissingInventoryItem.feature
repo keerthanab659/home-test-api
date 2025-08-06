@@ -1,12 +1,12 @@
 Feature: Add item with missing information - Missing ID, name, price and image fields
 
-  Background:
+Background:
     * url baseUrl
     # Load all test cases from a JSON file, which contains payloads with missing fields
     * def testData = read('classpath:testdata/missingInfo.json')
     * def Expected_Response = "Not all requirements are met"
 
-  Scenario Outline: Try to add item with missing <testCase>
+Scenario Outline: Try to add item with missing <testCase>
     Given path '/inventory/add'
     # Extract the specific request payload based on the current example row index
     * def requestPayload = testData[<index>].payload
@@ -16,7 +16,7 @@ Feature: Add item with missing information - Missing ID, name, price and image f
     * karate.log('Response:', response)
     And match response contains Expected_Response
 
-    Examples:
+  Examples:
       | index | testCase       |
       | 0     | Missing Id     |
       | 1     | Missing Name   |

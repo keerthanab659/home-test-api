@@ -1,11 +1,11 @@
 Feature: Add item for existent id
 
-  Background:
+Background:
     * url baseUrl
     # Load the test data with an existing inventory ID
-    * def ExistenceId = read('classpath:testData/addExistentId.json');
+    * def ExistenceId = read('classpath:testData/addNewInventoryItem.json');
 
-  Scenario: Add Inventory item for existent id 
+Scenario: Add Inventory item for existent id 
     Given path '/inventory/add'
     When request ExistenceId
     And method POST

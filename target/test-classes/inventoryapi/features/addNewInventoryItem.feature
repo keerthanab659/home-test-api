@@ -1,6 +1,6 @@
 Feature: Add New Inventory Items
 
-  Background:
+Background:
     * url baseUrl
     # Read the base product data from a JSON file
     * def inventoryItem = read('classpath:testData/addNewInventoryItem.json');
@@ -9,7 +9,7 @@ Feature: Add New Inventory Items
     # Set the generated ID into the inventoryItem payload
     * set inventoryItem.id = inventoryId
 
-  Scenario: Add item for non existent id
+Scenario: Add item for non existent id
     Given path '/inventory/add'
     And request inventoryItem
     When method POST

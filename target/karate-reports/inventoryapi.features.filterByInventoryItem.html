@@ -49,7 +49,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div>Scenarios</div>
   </div>
   <div id="nav-date">
-    <div>2025-08-05 08:31:39 PM</div>
+    <div>2025-08-06 11:51:11 AM</div>
   </div>
 </div>
 
@@ -81,7 +81,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>169</span>
+              <span>ms:</span>&nbsp;<span>66</span>
             </div>
           </div>
           <div class="step-row">
@@ -139,7 +139,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def expected_Response = read(&#39;classpath:testData/filterByInventory.json&#39;);</span>
       </div>
     </div>
-    <div class="time-cell passed">5</div>
+    <div class="time-cell passed">2</div>
   </div>
 
    
@@ -223,7 +223,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>When</span>&nbsp;<span>method GET</span>
       </div>
     </div>
-    <div class="time-cell passed">155</div>
+    <div class="time-cell passed">56</div>
   </div>
 
    
@@ -232,7 +232,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.11">20:31:39.833 request:
+  <div class="preformatted" data-parent="0.11">11:51:11.571 request:
 1 &gt; GET http://localhost:3100/api/inventory/filter?id=3
 1 &gt; Host: localhost:3100
 1 &gt; Connection: Keep-Alive
@@ -240,13 +240,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-20:31:39.984 response time in milliseconds: 150
+11:51:11.630 response time in milliseconds: 58
 1 &lt; 200
 1 &lt; X-Powered-By: Express
 1 &lt; Content-Type: application/json; charset=utf-8
 1 &lt; Content-Length: 68
 1 &lt; ETag: W/&quot;44-vJ0RBTNCd/juNFNVN25r22XAjZQ&quot;
-1 &lt; Date: Tue, 05 Aug 2025 15:01:39 GMT
+1 &lt; Date: Wed, 06 Aug 2025 06:21:11 GMT
 1 &lt; Connection: keep-alive
 1 &lt; Keep-Alive: timeout=5
 {&quot;id&quot;:&quot;3&quot;,&quot;name&quot;:&quot;Baked Rolls x 8&quot;,&quot;image&quot;:&quot;roll.png&quot;,&quot;price&quot;:&quot;$10&quot;}
@@ -307,7 +307,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.13">20:31:39.985 Response: {
+  <div class="preformatted" data-parent="0.13">11:51:11.632 Response: {
   &quot;id&quot;: &quot;3&quot;,
   &quot;name&quot;: &quot;Baked Rolls x 8&quot;,
   &quot;image&quot;: &quot;roll.png&quot;,
@@ -368,7 +368,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>And</span>&nbsp;<span>match response.name == expected_Response.name</span>
       </div>
     </div>
-    <div class="time-cell passed">2</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -396,7 +396,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>And</span>&nbsp;<span>match response.price == expected_Response.price</span>
       </div>
     </div>
-    <div class="time-cell passed">2</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    

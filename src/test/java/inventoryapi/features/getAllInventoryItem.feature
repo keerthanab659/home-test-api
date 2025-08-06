@@ -1,8 +1,8 @@
 Feature: Get all menu items
 
-  Background:
-        * url baseUrl
-  Scenario: Retrive all menu items
+Background:
+    * url baseUrl
+Scenario: Retrieve all menu items
         Given path '/inventory'
         When method GET
         Then status 200

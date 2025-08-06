@@ -49,7 +49,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div>Scenarios</div>
   </div>
   <div id="nav-date">
-    <div>2025-08-05 08:31:39 PM</div>
+    <div>2025-08-06 11:51:11 AM</div>
   </div>
 </div>
 
@@ -81,7 +81,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>93</span>
+              <span>ms:</span>&nbsp;<span>109</span>
             </div>
           </div>
           <div class="step-row">
@@ -167,7 +167,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def inventoryId = Math.floor(Math.random() * 1000).toString();</span>
       </div>
     </div>
-    <div class="time-cell passed">14</div>
+    <div class="time-cell passed">11</div>
   </div>
 
    
@@ -204,7 +204,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.8">20:31:39.623 Generated Unique ID: 621 
+  <div class="preformatted" data-parent="0.8">11:51:11.387 Generated Unique ID: 488 
 </div>   
 
   
@@ -231,7 +231,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>set inventoryItem.id = inventoryId</span>
       </div>
     </div>
-    <div class="time-cell passed">4</div>
+    <div class="time-cell passed">3</div>
   </div>
 
    
@@ -315,7 +315,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>When</span>&nbsp;<span>method POST</span>
       </div>
     </div>
-    <div class="time-cell passed">27</div>
+    <div class="time-cell passed">45</div>
   </div>
 
    
@@ -324,23 +324,23 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.15">20:31:39.630 request:
+  <div class="preformatted" data-parent="0.15">11:51:11.392 request:
 1 &gt; POST http://localhost:3100/api/inventory/add
 1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; Content-Length: 67
+1 &gt; Content-Length: 75
 1 &gt; Host: localhost:3100
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
 1 &gt; Accept-Encoding: gzip,deflate
-{&quot;id&quot;:&quot;621&quot;,&quot;name&quot;:&quot;Hawaiian&quot;,&quot;image&quot;:&quot;hawaiian.png&quot;,&quot;price&quot;:&quot;$14&quot;}
+{&quot;id&quot;:&quot;488&quot;,&quot;name&quot;:&quot;Classic Muzzarella&quot;,&quot;image&quot;:&quot;classic.png&quot;,&quot;price&quot;:&quot;$8&quot;}
 
-20:31:39.654 response time in milliseconds: 23
+11:51:11.436 response time in milliseconds: 43
 1 &lt; 200
 1 &lt; X-Powered-By: Express
 1 &lt; Content-Type: text/plain; charset=utf-8
 1 &lt; Content-Length: 2
 1 &lt; ETag: W/&quot;2-nOO9QiTIwXgNtWtBJezz8kv3SLc&quot;
-1 &lt; Date: Tue, 05 Aug 2025 15:01:39 GMT
+1 &lt; Date: Wed, 06 Aug 2025 06:21:11 GMT
 1 &lt; Connection: keep-alive
 1 &lt; Keep-Alive: timeout=5
 OK
@@ -399,7 +399,7 @@ OK
         <span>And</span>&nbsp;<span>karate.write(inventoryItem, &#39;test-classes/inventoryapi/testData/addNewInventoryItem.json&#39;)</span>
       </div>
     </div>
-    <div class="time-cell passed">40</div>
+    <div class="time-cell passed">42</div>
   </div>
 
    
@@ -408,7 +408,7 @@ OK
 
   
 
-  <div class="preformatted" data-parent="0.18">20:31:39.696 write to file: target\test-classes\inventoryapi\testData\addNewInventoryItem.json
+  <div class="preformatted" data-parent="0.18">11:51:11.478 write to file: target\test-classes\inventoryapi\testData\addNewInventoryItem.json
 </div>   
 
   
@@ -428,7 +428,7 @@ OK
         <span>*</span>&nbsp;<span>karate.log(&#39;Inventory Item:&#39;, inventoryItem)</span>
       </div>
     </div>
-    <div class="time-cell passed">2</div>
+    <div class="time-cell passed">3</div>
   </div>
 
    
@@ -437,11 +437,11 @@ OK
 
   
 
-  <div class="preformatted" data-parent="0.19">20:31:39.697 Inventory Item: {
-  &quot;id&quot;: &quot;621&quot;,
-  &quot;name&quot;: &quot;Hawaiian&quot;,
-  &quot;image&quot;: &quot;hawaiian.png&quot;,
-  &quot;price&quot;: &quot;$14&quot;
+  <div class="preformatted" data-parent="0.19">11:51:11.481 Inventory Item: {
+  &quot;id&quot;: &quot;488&quot;,
+  &quot;name&quot;: &quot;Classic Muzzarella&quot;,
+  &quot;image&quot;: &quot;classic.png&quot;,
+  &quot;price&quot;: &quot;$8&quot;
 }
  
 </div>   
