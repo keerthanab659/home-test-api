@@ -99,10 +99,6 @@ Sample reports are stored inside the **reports** folder.
 
 | **File Name**              | **Description**                       |
 | -------------------------- | ------------------------------------- |
-<<<<<<< HEAD
-=======
-| `addExistentId.json`       | Add item with an already existing ID  |
->>>>>>> 2dcf1cb32ae58822460c0ab807ec0c3371e09b95
 | `addNewInventoryItem.json` | New data with a valid request payload |
 | `filterByInventory.json`   | Request payload to filter item by ID  |
 | `missingInfo.json`         | Payload missing mandatory fields      |
