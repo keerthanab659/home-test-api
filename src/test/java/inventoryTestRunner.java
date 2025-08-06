@@ -5,6 +5,6 @@ public class inventoryTestRunner {
     @Karate.Test
     Karate testInventory() {
         return Karate.run("classpath:inventoryapi/features");
-                
     }
+
 }
