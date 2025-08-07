@@ -1,7 +1,6 @@
 function fn() {
-  var config = { 
+  var config = {
     baseUrl: 'http://localhost:3100/api'
-      };
-
+  };
   return config;
 }
