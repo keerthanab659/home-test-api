@@ -10,4 +10,4 @@ Scenario: Add Inventory item for existent id
     When request ExistenceId
     And method POST
     Then status 400
-    * karate.log('Response:', response)
+    * karate.log('Response:', response) 

@@ -24,7 +24,7 @@
     </dependencies>
 
     <build>
-        <testResources>
+        <testResources> 
             <testResource>
                 <directory>src/test/java</directory>
                 <excludes>

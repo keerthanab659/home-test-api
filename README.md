@@ -45,9 +45,9 @@ home_test_api/
 
 **Clone the Repository**
 
-```bash
-git clone <repository-url>
-```
+   ```bash
+   git clone <repository-url>
+   ```
 
 **Run the Docker file**
 
@@ -72,7 +72,7 @@ git clone <repository-url>
 
 **1. Navigate to Project Directory** 
 
- ```bash
+   ```bash
    cd home-test-api
    ```
 
