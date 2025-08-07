@@ -15,4 +15,4 @@ Scenario: Filter item by id
     And match response.id == expected_Response.id
     And match response.name == expected_Response.name
     And match response.price == expected_Response.price
-    And match response.image == expected_Response.image
+    And match response.image == expected_Response.image 
