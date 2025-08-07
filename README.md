@@ -46,8 +46,7 @@ home_test_api/
 **Clone the Repository**
 
 ```bash
-git clone https://github.com/your-username/home-test-api.git
-cd home-test-api
+git clone <repository-url>
 ```
 
 **Run the Docker file**
@@ -71,34 +70,23 @@ cd home-test-api
 
 ## 🚀 Test Execution
 
-**Run Tests by File explorer or in Terminal**
+**1. Navigate to Project Directory** 
 
-1. Navigate to Project Directory then run test
+ ```bash
+   cd home-test-api
+   ```
+
+**2. Build the project**
+
    ```bash
    mvn clean
    ```
-   ```bash
-   mvn compile
-   ```
+   
+**3. Run the test**
+
    ```bash
    mvn test -Dtest=inventoryTestRunner
    ```
-
-**Run Tests by inventoryTestRunner (Runner File)**
-
-**1. Open your inventoryTestRunner.java file**
-   You should see a "Run Test/Run Java" button on top right side
-   Click on that "Run Test" button
-
-**2. Right-click on Method**
-   Right-click directly on the testInventory() method name
-   Select "Run Test" from the context menu
-
-**3. Right-click on Class**
-   Right-click on the class name inventoryTestRunner
-   Select "Run Test" from the context menu
-
----
 
 ## 📂 Reports
 
